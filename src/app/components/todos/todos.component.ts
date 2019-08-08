@@ -1,0 +1,21 @@
+import { Component, OnInit } from "@angular/core";
+import { Todo } from "../../models/Todo";
+import { CompileTemplateMetadata } from "@angular/compiler";
+
+@Component({
+  selector: "app-todos",
+  templateUrl: "./todos.component.html",
+  styleUrls: ["./todos.component.css"]
+})
+export class TodosComponent implements OnInit {
+  todos: Todo[];
+  constructor() {}
+
+  ngOnInit() {
+    this.todos = [
+      { id: 1, title: "first item", completed: false },
+      { id: 1, title: "second item", completed: true },
+      { id: 1, title: "third itme", completed: false }
+    ];
+  }
+}
